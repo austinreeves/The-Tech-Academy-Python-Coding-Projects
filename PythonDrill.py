@@ -10,18 +10,8 @@ dirs = os.listdir(path)
 
 for file in dirs:
     if file.endswith(".txt"):
-        print(file)
+        txt_files = os.path.join(path,file)
+        mTime = time.localtime(os.path.getmtime(path))
+        fTime = time.strftime("%m/%d/%Y, %H:%M:%S", mTime)
+        print("File Name:", txt_files,"Modified:", fTime)
 
-path1 = os.path.join(path, "Hello.txt")
-
-mod_time1 = os.path.getmtime(path1)
-
-local_time1 = time.ctime(mod_time1)
-print(local_time1)
-
-path2 = os.path.join(path, "World.txt")
-
-mod_time2 = os.path.getmtime(path2)
-
-local_time2 = time.ctime(mod_time2)
-print(local_time2)
