@@ -26,3 +26,10 @@ with conn:
     conn.commit()
 conn.close()
         
+conn = sqlite3.connect('drill.db')
+
+with conn:
+    cur = conn.cursor()
+    cur.execute("select col_fname from tbl_drill")
+    for row in cur:
+        print(row)
