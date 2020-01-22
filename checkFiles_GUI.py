@@ -24,16 +24,16 @@ class ParentWindow(Frame):
         self.lblBro2.grid(row=2,column=0,padx=(10,0),pady=(10,0))
 
         self.txtBro1 = Entry(self.master,text='',font=("Helvetica",16),fg='black',bg='white')
-        self.txtBro1.grid(row=1,column=1,rowspan=1,columnspan=5,padx=(10,0),pady=(100,0))
+        self.txtBro1.grid(row=1,column=1,rowspan=1,columnspan=3,padx=(10,0),pady=(100,0),sticky=W+E+S)
 
         self.txtBro2 = Entry(self.master,text='',font=("Helvetica",16),fg='black',bg='white')
-        self.txtBro2.grid(row=2,column=1,rowspan=1,columnspan=5,padx=(10,0),pady=(10,0))
+        self.txtBro2.grid(row=2,column=1,rowspan=1,columnspan=3,padx=(10,0),pady=(10,0),sticky=W+E+S)
 
         self.btnCheck = Button(self.master,text="Check for files...",width=15,height=2,command='')
         self.btnCheck.grid(row=3,column=0,padx=(10,0),pady=(10,0))
 
         self.btnClose = Button(self.master,text="Close Program",width=15,height=2,command=self.close)
-        self.btnClose.grid(row=3,column=8,padx=(10,0),pady=(10,0))
+        self.btnClose.grid(row=3,column=3,padx=(10,0),pady=(10,0),sticky=E+S)
 
     def close(self):
         self.master.destroy()
